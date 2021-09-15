@@ -97,4 +97,4 @@ def get_contour(labeled_path):
 
 
 get_contour(DATA_FOLDER + "sample.png")
-cv2.waitKey()
+# cv2.waitKey()
