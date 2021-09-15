@@ -20,6 +20,7 @@ color_map = {
         "default": 203,
     },
 }
+
 # poetry run python color_test.py
 DATA_FOLDER = "./analyze/"
 
@@ -42,18 +43,11 @@ def callback(key: str, type):
         contours, _ = cv2.findContours(mask, cv2.RETR_TREE,
                                        cv2.CHAIN_APPROX_SIMPLE)
         contoured = cv2.drawContours(result, contours, -1, (255, 255, 0), 1)
-        # print(contours[0].shape)
-        # print(np.squeeze(contours[0]))
-
-        # polygon_contours = np.squeeze(contours[0])
-
-        # show thresholded image
         cv2.imshow('image', contoured)
     return setter
 
 
 # create trackbars for color change
-# MIN_VALUE = 0
 MAX_VALUE = 255
 for key in color_map:
     color = color_map[key]
