@@ -24,7 +24,7 @@ color_map = {
 # poetry run python color_test.py
 DATA_FOLDER = "./analyze/"
 
-img = cv2.imread(DATA_FOLDER + "sample.png")
+img = cv2.imread(DATA_FOLDER + "0a3fdc9f65.png")
 img = cv2.resize(img, (512, 512), fx=0.5, fy=0.5)
 cv2.namedWindow('image')
 
